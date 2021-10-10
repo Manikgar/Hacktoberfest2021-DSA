@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int recursion(int x,int z);
+int main(){
+    int n,r;
+    cout<<"enter nos";
+    cin>>n>>r;
+    cout<<"ncr is "<<recursion(n,r);
+    return 0;
+}
+
+int recursion(int n,int r){
+    if(r==0|r==n)
+return 1;
+else
+    return (recursion(n-1,r-1)+recursion(n-1,r));
+}
