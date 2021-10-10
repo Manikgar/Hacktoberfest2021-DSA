@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int fib(int x);
+int main(){
+int num;
+int result;
+cout<<"enter a number";
+cin>>num;
+result=fib(num);
+cout<<"nth term is"<<"   "<<result;
+}
+int fib(int num){
+if(num==1)
+return 0;
+if (num==2)
+return 1;
+return(fib(num-2)+fib(num-1));
+}
